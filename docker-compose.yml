@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  translate:
+    build: .
+    container_name: translate-api-last
+    ports:
+      - "8888:5050"
+    volumes:
+      - ./models:/app/models
+    restart: always

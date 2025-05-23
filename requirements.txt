@@ -1,0 +1,4 @@
+Flask~=3.1.1
+OpenCC~=1.1.9
+langdetect~=1.0.9
+argostranslate~=1.9.6
