@@ -9,8 +9,8 @@ cd translate-api
 ## 构建镜像
 docker build -t translate-api .
 
-## 运行容器，映射端口到宿主机 8887
-docker run -d -p 9005:8887 --name translate-web-api translate-api
+## 运行容器，映射端口到宿主机 9005
+docker run -d -p 9005:5050 --name translate-web-api translate-api
 
 # 2.docker-compose.yml 和 Dockerfile 方式
 
