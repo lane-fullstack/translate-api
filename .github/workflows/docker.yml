@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "app.py"
     tags:
       - "v*"
   workflow_dispatch:
