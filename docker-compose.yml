@@ -1,10 +1,11 @@
 version: "3.9"
 services:
   translate:
-    build: .
-    container_name: translate-api-last
+    image: ghcr.io/lane-fullstack/translate-api:latest
+    container_name: translate-api
     ports:
-      - "8888:5050"
+      - "5050:5050"
     volumes:
-      - ./models:/app/models
-    restart: always
+      - ./translate-api/models:/app/models
+      - ./translate-api/config.yaml:/app/config.yaml:ro
+    restart: unless-stopped

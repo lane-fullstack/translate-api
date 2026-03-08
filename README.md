@@ -1,6 +1,7 @@
 # translate
-# docker image
-ghcr.io/lane-fullstack/translate-api
+
+## models 
+download https://drive.google.com/drive/folders/11wxM3Ze7NCgOk_tdtRjwet10DmtvFu3i
 
 # 1.镜像的方式
 
@@ -28,7 +29,7 @@ project-root/
 
 # docker-compose.yml
 
-````
+```
 version: "3.9"
 services:
   translate:
@@ -46,3 +47,18 @@ services:
 # 运行
     
 `docker-compose up -d --build`
+
+
+## Header 方式（推荐）：
+```
+curl -X POST http://localhost:5050/translate \
+     -H "Content-Type: application/json" \
+     -H "X-API-KEY: your_secret_key_here" \
+     -d '{"text": "你好"}'
+```
+### URL 参数方式：
+```
+curl -X POST "http://localhost:5050/translate?key=your_secret_key_here" \
+     -H "Content-Type: application/json" \
+     -d '{"text": "你好"}'
+```   
