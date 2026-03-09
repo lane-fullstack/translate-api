@@ -1,7 +1,7 @@
 # translate
 
 ## models 
-download https://drive.google.com/drive/folders/11wxM3Ze7NCgOk_tdtRjwet10DmtvFu3i
+offline download https://www.argosopentech.com/argospm/index/
 
 # 1.镜像的方式
 
@@ -62,3 +62,6 @@ curl -X POST "http://localhost:5050/translate?key=your_secret_key_here" \
      -H "Content-Type: application/json" \
      -d '{"text": "你好"}'
 ```   
+
+
+thanks for https://github.com/argosopentech/argos-translate

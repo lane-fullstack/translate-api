@@ -22,5 +22,7 @@ COPY . .
 # 安装依赖
 RUN pip install --no-cache-dir -r requirements.txt
 
+expose 5050
+
 # 启动时自动下载语言包
 CMD ["python", "app.py"]

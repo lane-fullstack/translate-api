@@ -3,3 +3,4 @@ models/
 .dockerignore
 .vsc.xml
 .idea/
+venv
