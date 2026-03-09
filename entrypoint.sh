@@ -1,16 +1,11 @@
 #!/bin/sh
 
-# Get the number of CPU cores
-CORES=$(nproc)
+# Set default values for environment variables
+PORT=${PORT:-5050}
+WORKERS=${GUNICORN_WORKERS:-4}
 
-# Calculate the default number of workers based on Gunicorn's recommendation
-DEFAULT_WORKERS=$((2 * CORES + 1))
-
-# Use the GUNICORN_WORKERS environment variable if set, otherwise use the default
-WORKERS=${GUNICORN_WORKERS:-$DEFAULT_WORKERS}
-
-echo "Starting Gunicorn with $WORKERS workers..."
+echo "Starting Gunicorn with $WORKERS workers on port $PORT..."
 
 # Execute Gunicorn
 # Using exec allows Gunicorn to be the main process (PID 1), which helps with signal handling
-exec gunicorn -w "$WORKERS" -b "0.0.0.0:5050" --timeout "120" "app:app"
+exec gunicorn -w "$WORKERS" -b "0.0.0.0:${PORT}" --timeout "120" "app:app"
