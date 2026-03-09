@@ -3,3 +3,4 @@ OpenCC~=1.1.9
 langdetect~=1.0.9
 argostranslate~=1.9.6
 PyYAML~=6.0.1
+gunicorn~=22.0.0
