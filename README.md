@@ -23,7 +23,7 @@ services:
     image: ghcr.io/lane-fullstack/translate-api:latest
     container_name: translate-api
     environment:
-      - GUNICORN_WORKERS=8 # 手动设置为 8 个 workers
+      - GUNICORN_WORKERS=8 #   8 个 workers
     ports:
       - "5050:5050"
     volumes:
